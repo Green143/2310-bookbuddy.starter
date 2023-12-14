@@ -31,3 +31,8 @@ nav a{
   display: flex;
   flex-wrap: wrap;
 }
+
+.bookimg {
+  width: 400px;
+   height: 600px;
+}
