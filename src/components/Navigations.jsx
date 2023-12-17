@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 const Navigations = ({user}) => {
     
+    console.log(user)
     
     return (
         <nav>
@@ -15,8 +16,10 @@ const Navigations = ({user}) => {
                 ) : (
                     
                     <span>
+                        <Link to="/aboutUs">About Us</Link>
                         <Link to="/login">Login</Link>
                         <Link to='/register'>Register</Link>
+
                     </span>
                 )
             }

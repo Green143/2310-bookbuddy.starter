@@ -1,10 +1,44 @@
 
+import axios from "axios"
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
+
+
+axios.patch
 
 const Account = ({user, setUser, setToken }) => {
     const navigate = useNavigate()
     
+    useEffect(() => {
+
+    
+    const checkOutBooks= async () =>{
+        const loggedInToken = window.localStorage.getItem( 'token')
+
+        if (loggedInToken) {
+            const response= await axios.patch('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/:bookId', 
+            {available: false}, 
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${loggedInToken}`
+                  }
+
+            })
+            setUser(response.data)
+        }else{
+        
+        throw 'no token'
+        }
+    }
+    checkOutBooks ()
+})  
+
+
+
+
+
     const logout = () => {
         window.localStorage.removeItem('token');
         setToken(null)

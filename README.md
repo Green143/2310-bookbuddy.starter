@@ -20,15 +20,15 @@ Details on the API can be found 🔗 [here]
 - a user can register
 
 # Tasks
-- [] all users should see the list of all books
-- [] all users should see the details of a single book
+- [x] all users should see the list of all books
+- [x] all users should see the details of a single book
 - [] a logged in user can checkout an available book
 - [] a logged in user should be able to see their checked out books
 - [] a logged in user can return a checked out book
 - [] a guest user cannot checkout or return any books
 - [] a guest user cannot see the account page of any registered user
-- [] all users should be able to search for books by title (no need for axios)
-- [] in the search for books, display results of search out of total
+- [x] all users should be able to search for books by title (no need for axios)
+- [x] in the search for books, display results of search out of total
 - [] apply some css so that we can see which link in the nav bar is selected
 - [] display a welcome message to a logged in user when viewing homepage otherwise, normal welcome 
 - [] all users can see an about us page 

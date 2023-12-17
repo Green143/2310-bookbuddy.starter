@@ -7,7 +7,7 @@ const SingleBooks = ({books}) =>{
 
     const book = books.find((book) =>{
         return id === book.id
-        console.log(id)
+        //console.log(id)
     })
     if(!book){
         return null
