@@ -12,7 +12,7 @@ import Homepage from './components/Homepage'
 import SingleBooks from './components/SingleBooks'
 import SearchBar from './components/SearchBar'
 import AboutUs from './components/AboutUs'
-
+import CheckedBook from './components/CheckedBook'
 
 
 
@@ -71,7 +71,8 @@ function App() {
       <Route path='/login' element={<Login setUser={setUser} setToken={setToken}/>}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/aboutUs' element={<AboutUs />}/>
-      <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken}/>}/>
+      <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken} books={books}/>}/>
+      <Route path='/checkedBook' element={<CheckedBook />}/>
     </Routes>
 
       

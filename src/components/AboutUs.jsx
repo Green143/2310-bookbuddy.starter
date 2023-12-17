@@ -1,9 +1,7 @@
 
 
 
-const AboutUs= ({user}) =>{
-    
-    console.log(user)
+const AboutUs= () => {
     return(
         <div>
             <h1>About Us</h1>
@@ -12,4 +10,5 @@ const AboutUs= ({user}) =>{
     )
 
 }
+
 export default AboutUs
