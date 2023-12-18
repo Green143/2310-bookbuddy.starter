@@ -1,6 +1,6 @@
 body {
   font-family: Georgia, serif;
-  background-color: #f8f8f8;
+  background-color: #c0a8a8;
 
   margin: 0;
   padding: 0;
@@ -43,5 +43,6 @@ nav a{
 }
 
 .callit{
-  background-color: rgb(212, 177, 177)
+  background-color: rgb(227, 233, 227);
+  background-image: url("https://governorsfoundation.org/app/uploads/2022/04/GELF_Book-Bus-2.jpg");
 }
