@@ -1,8 +1,10 @@
-const Homepage = () => {
+
+
+const Homepage = ({user}) => {
     return(
         <div>
             
-            <h2>Welcome to our library!</h2>
+            <h2>Welcome to our library {user.firstname}!</h2>
 
         </div>
     )

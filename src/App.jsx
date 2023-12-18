@@ -13,7 +13,7 @@ import SingleBooks from './components/SingleBooks'
 import SearchBar from './components/SearchBar'
 import AboutUs from './components/AboutUs'
 import CheckedBook from './components/CheckedBook'
-
+import './index.css'
 
 
 function App() {
@@ -58,13 +58,16 @@ function App() {
  
   return (
     <>
-    <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
+    <h1><center><img src="https://media.tegna-media.com/assets/WATN/images/074fe32f-75f0-40a9-99db-d873898d49b8/074fe32f-75f0-40a9-99db-d873898d49b8_750x422.jpg" ></img>
+    <br></br><Link to='/'>Read Me Library</Link></center></h1>
     <Navigations user={user}/>
     <h4> Search: </h4>
+    
     <SearchBar books={books}/>
+    <hr/>
     
     <Routes>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<Homepage user={user}/>}/>
       <Route path='/successRegi' element={<SuccessRegi />}/>
       <Route path='/books/:id' element={<SingleBooks books={books}/>}/>
       <Route path='/books' element={<Books books={books}/>}/>

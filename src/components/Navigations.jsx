@@ -16,13 +16,15 @@ const Navigations = ({user}) => {
                 ) : (
                     
                     <span>
-                        <Link to="/aboutUs">About Us</Link>
+                      
                         <Link to="/login">Login</Link>
                         <Link to='/register'>Register</Link>
 
                     </span>
-                )
+                )  
+             
             }
+            <Link to="/aboutUs">About Us</Link>
         </nav>
     )
 }

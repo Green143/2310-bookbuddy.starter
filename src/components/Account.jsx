@@ -36,7 +36,7 @@ const Account = ({user, setUser, setToken }) => {
         const deleteReserve = async (reserveId) => {
             const loggedInToken = window.localStorage.getItem( 'token')
             if(loggedInToken){
-                const {data} = await axios.get(`https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/reservations/${reserveId}`, {
+                const response = await axios.delete(`https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/reservations/${reserveId}`, {
                   headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${loggedInToken}`
@@ -70,11 +70,21 @@ const Account = ({user, setUser, setToken }) => {
             <h1>Account</h1>
             <button onClick={() => {logout()}}>Logout</button>
             <hr/>
-            <h2>Email: {user.email}</h2>
-            <h4>This could be a good place to show checked out books...</h4>
+            <h2>Email: {user.email}</h2> 
+            <h3> Your Reserved Books:</h3>
+            <ul>
+                {
+                    reserve.map((reserved) =>{
+                        return(
+                            <li key={reserved.id}><h2>{reserved.title}</h2>
+                            <button onClick={()=> {deleteReserve(reserved.id)}}>Check In Book {reserved.title}</button>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
             
-            
-           
         </div>
-    )}
+    )
+}
 export default Account
